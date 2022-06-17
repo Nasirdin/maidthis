@@ -1,0 +1,38 @@
+.header {
+  padding: 10px 0;
+  border-bottom: 1px solid #999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    margin-left: 40px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    font-weight: 500;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .icon {
+    margin-right: 10px;
+    z-index: 10;
+  }
+}

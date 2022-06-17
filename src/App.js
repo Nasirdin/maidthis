@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "react-redux";
+import store from "./redux";
+import { BrowserRouter } from "react-router-dom";
+import Header from "./companents/Header";
+import Footer from "./companents/Footer";
+import BookingForm from "./companents/BookingForm";
+import HomePartners from "./companents/HomePartners";
+import Covid19 from "./companents/Covid19";
+import CustomerReviews from "./companents/HomePartners/CustomerReviews";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+          <BookingForm/>
+          <HomePartners/>
+          <Covid19/>
+          <CustomerReviews/>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
